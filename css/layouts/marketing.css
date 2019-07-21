@@ -392,7 +392,7 @@ a.pure-button-primary {
         height:  60em;
         background-repeat: no-repeat;
         background-image: url("../../img/floral1.png");
-        background-position: fixed;
+        position: fixed;
        
     }
 
