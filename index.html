@@ -39,6 +39,27 @@
 
 
 
+<style>
+/* Dropdown TCC */
+.dropdown {
+    position: relative;
+}
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+.dropdown:hover .submenu {
+    display: block;
+}
+.dropdown .submenu li {
+    margin: 5px 0;
+}
+</style>
 </head>
 
 
@@ -67,6 +88,14 @@
                 <li class="pure-menu-item"><a href="educativo.html" class="pure-menu-link">Educativo</a></li>
             
     <li><a href="tcc.pdf" target="_blank">TCC</a></li>
+
+<li class="dropdown">
+    <a href="#">TCC</a>
+    <ul class="submenu">
+        <li><a href="tcc.pdf" target="_blank">Baixar TCC</a></li>
+    </ul>
+</li>
+
 </ul>
             
               
@@ -253,3 +282,4 @@
 
 </body>
 </html>
+
