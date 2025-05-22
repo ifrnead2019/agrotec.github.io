@@ -1,108 +1,98 @@
 <!doctype html>
-<html lang="Pt">
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a responsive product landing page.">
     <title>Consultoria Ambiental</title>
-    
+
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
-    
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-    <!--<![endif]-->
-    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="css/layouts/marketing.css">
-        <!--<![endif]-->
+    <link rel="stylesheet" href="css/layouts/marketing.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
 
-<!-- Para fazer rolar suave
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-     <script>    
-  jQuery(document).ready(function($) { 
-   $(".scroll").click(function(event){
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
-   });
-  });
- </script>
- --> 
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        /* Botão menu mobile */
+        .custom-menu-toggle {
+            display: none;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            z-index: 1000;
+            font-size: 1.5em;
+            color: #333;
+        }
 
+        @media (max-width: 768px) {
+            .pure-menu-horizontal .pure-menu-list {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                width: 100%;
+            }
 
+            .pure-menu-horizontal.active .pure-menu-list {
+                display: flex;
+            }
 
-<style>
-/* Dropdown TCC */
-.dropdown {
-    position: relative;
-}
-.dropdown .submenu {
-    display: none;
-    position: absolute;
-    background: #fff;
-    list-style: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    z-index: 1000;
-}
-.dropdown:hover .submenu {
-    display: block;
-}
-.dropdown .submenu li {
-    margin: 5px 0;
-}
-</style>
+            .custom-menu-toggle {
+                display: block;
+            }
+        }
+    </style>
 </head>
-
-
-<body>
-
 <body id="pagina-um">
+
+<!-- Botão hambúrguer -->
+<a href="#" class="custom-menu-toggle" id="toggle">
+    <i class="fa fa-bars"></i>
+</a>
+
 <div class="header">
-    <div>
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
- <!-- <div class="pure-menu pure-menu-horizontal"> -->
-    <div id="logo">
-        <a href="index.html"><img src="img/logo001.png" alt="logo"></a>
-   
-    
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" id="menu">
+        <div id="logo">
+            <a href="index.html"><img src="img/logo001.png" alt="logo"></a>
+        </div>
         <ul class="pure-menu-list">
-    <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Início</a></li>
+            <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Início</a></li>
+            <li class="pure-menu-item"><a href="tcc.pdf" class="pure-menu-link" target="_blank">TCC</a></li>
+            <li class="pure-menu-item"><a href="sobre.html" class="pure-menu-link">Quem Somos</a></li>
 
-    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-        <a href="#" class="pure-menu-link">TCC</a>
-        <ul class="pure-menu-children">
-            <li class="pure-menu-item"><a href="tcc.pdf" class="pure-menu-link" target="_blank">Baixar TCC</a></li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" class="pure-menu-link">Serviços</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="projetos.html" class="pure-menu-link">Projetos</a></li>
+                    <li class="pure-menu-item"><a href="ambiental.html" class="pure-menu-link">Ambiental</a></li>
+                    <li class="pure-menu-item"><a href="site.html" class="pure-menu-link">Criação de Sites</a></li>
+                    <li class="pure-menu-item"><a href="educativo.html" class="pure-menu-link">Educativo</a></li>
+                </ul>
+            </li>
+
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="ajudaecontato.html" class="pure-menu-link">Ajuda e Contato</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="duvidas.html" class="pure-menu-link">Dúvidas</a></li>
+                    <li class="pure-menu-item"><a href="ajudaecontato.html" class="pure-menu-link">Fale Conosco</a></li>
+                </ul>
+            </li>
         </ul>
-    </li>
+    </div>
+</div>
 
-    <li class="pure-menu-item"><a href="sobre.html" class="pure-menu-link">Quem Somos</a></li>
+<!-- Script do botão mobile -->
+<script>
+    document.getElementById('toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('menu').classList.toggle('active');
+    });
+</script>
 
-    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-        <a href="#" id="menuLink1" class="pure-menu-link">Serviços</a>
-        <ul class="pure-menu-children">
-            <li class="pure-menu-item"><a href="projetos.html" class="pure-menu-link">Projetos</a></li>
-            <li class="pure-menu-item"><a href="ambiental.html" class="pure-menu-link">Ambiental</a></li>
-            <li class="pure-menu-item"><a href="site.html" class="pure-menu-link">Criação de Sites</a></li>
-            <li class="pure-menu-item"><a href="educativo.html" class="pure-menu-link">Educativo</a></li>
-        </ul>
-    </li>
-
-    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-        <a href="ajudaecontato.html" class="pure-menu-link">Ajuda e Contato</a>
-        <ul class="pure-menu-children">
-            <li class="pure-menu-item"><a href="duvidas.html" class="pure-menu-link">Dúvidas</a></li>
-            <li class="pure-menu-item"><a href="ajudaecontato.html" class="pure-menu-link">Fale Conosco</a></li>
-        </ul>
-    </li>
 
     <section class="busca">
         <div id="busca-melhorada">
