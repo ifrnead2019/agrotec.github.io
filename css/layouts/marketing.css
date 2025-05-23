@@ -537,6 +537,21 @@ div#figure ul li span {
     color: #0ec97b;
     background-color: #222;
 }
+.home-menu {
+    background: #111;
+    width: 100%;
+    padding: 1em;
+}
+
+.home-menu a {
+    color: white;
+}
+
+.home-menu a:hover {
+    color: #0ec97b;
+    background-color: #222;
+}
+
 
 /* Rodapé ajustado */
 .footer {
@@ -553,3 +568,13 @@ div#figure ul li span {
 .content {
     padding-bottom: 80px;
 }
+.splash-container {
+    background-image: url("img/floral4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh; /* ajustável */
+    position: relative;
+    width: 100%;
+}
+
