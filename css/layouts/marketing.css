@@ -503,3 +503,53 @@ div#figure ul li span {
      margin: 10px;
      padding: 0px 0px 0 0px;
 }
+
+/* === CORREÇÕES APLICADAS === */
+
+/* Corrigir imagem de fundo responsiva */
+.splash-container {
+    background-image: url("img/floral4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    width: 100%;
+}
+
+/* Ajustar .pure-img-responsive */
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Menu responsivo com cor consistente */
+.home-menu {
+    background: #111;
+    width: 100%;
+    padding: 1em;
+}
+.home-menu a {
+    color: white;
+}
+.home-menu a:hover {
+    color: #0ec97b;
+    background-color: #222;
+}
+
+/* Rodapé ajustado */
+.footer {
+    background: #111;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 2em;
+}
+
+/* Espaço extra para evitar sobreposição com rodapé */
+.content {
+    padding-bottom: 80px;
+}
